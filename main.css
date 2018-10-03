@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 150px;
-  background-color: #ffccdd;
+  background-color: #f6ec66;
 }
 
 h1 {
@@ -12,7 +12,11 @@ h1 {
   font-size: 40px;
   letter-spacing: 2px;
   margin-bottom: 0px;
-  font-family: Bevan;
+  color: #f65454;
+}
+
+.title {
+  cursor: pointer;
 }
 
 .inputSection {
@@ -33,10 +37,19 @@ inputs {
 .addOption {
   margin-top: 10px;
   border-radius: 4px;
-  background-color: #ff0055;
+  background-color: #f97272;
 }
 
 .goButton {
   border-radius: 4px;
-  background-color: #ff0055;
+  background-color: #f97272;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
 }

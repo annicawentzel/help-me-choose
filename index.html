@@ -2,17 +2,48 @@
 <html lang=en>
   <head>
     <meta charset="utf-utf-8">
-    <title>Help me choose</title>
+    <title>Gottgott</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Help me choose between..</h1>
+    <h1 class="title">Hjälp mig välja...</h1>
+    <div class="row">
+     <div class="column">
+       <img src="bulle.jpg" alt="bulle" width="300" height="300">
+     </div>
+     <div class="column">
+       <img src="glass.jpg" alt="glass" width="300" height="300">
+     </div>
+     <div class="column">
+       <img src="apple.jpg" alt="apple" width="300" height="300">
+     </div>
+   </div>
     <div class="inputSection">
       <div class="inputs">
-        <input placeholder="Something"></input>
+        <input placeholder="Skriv något gott här"></input>
         </div>
-        <button class="addOption">Add</button>
+        <button class="addOption">Lägg till</button>
     </div>
-    <button class="goButton">Go!</button>
+    <div class="resultsection"></div>
+    <button class="goButton">Välj!</button>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function() {
+      $('.resultsection').hide()
+
+      var add_option = function() {
+        $('.inputs').append('<input></input>')
+      }
+
+      $('.addOption').click(add_option);
+
+      var change_colour = function(){
+        $('body').css('background-color', '#fff');
+      };
+
+      $('.title').click(change_colour);
+    })
+  </script>
   </body>
 </html>
