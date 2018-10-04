@@ -4,6 +4,7 @@
     <meta charset="utf-utf-8">
     <title>Gottgott</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
   </head>
   <body>
     <h1 class="title">Hjälp mig välja...</h1>
@@ -24,8 +25,8 @@
         </div>
         <button class="addOption">Lägg till</button>
     </div>
-    <div class="resultsection"></div>
-    <button class="goButton">Välj!</button>
+    <div class="resultSection"></div>
+    <button class="submit">Välj!</button>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
@@ -43,6 +44,19 @@
       };
 
       $('.title').click(change_colour);
+
+      var options = []
+      var submit = function() {
+        $('.inputsection').hide()
+        $('.resultSection').css('display', 'flex')
+        $('input').each(function() {
+          options.push($(this).val())
+        })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner);
+        $('.resultSection').text(winner)
+      }
+      $('.submit').click(submit)
     })
   </script>
   </body>

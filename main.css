@@ -3,15 +3,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  /*margin-top: 150px;*/
   background-color: #f6ec66;
 }
 
 h1 {
+  font-family: 'Pacifico', cursive;
   font-weight: lighter;
-  font-size: 40px;
+  font-size: 100px;
   letter-spacing: 2px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   color: #f65454;
 }
 
@@ -20,7 +21,7 @@ h1 {
 }
 
 .inputSection {
-  margin: 50px 0px 80px 0px;
+  margin: 20px 0px 20px 0px;
   width: 400px;
 }
 
@@ -40,9 +41,10 @@ inputs {
   background-color: #f97272;
 }
 
-.goButton {
+.submit {
   border-radius: 4px;
   background-color: #f97272;
+  padding: 10px;
 }
 
 .row {
@@ -52,4 +54,13 @@ inputs {
 .column {
   flex: 33.33%;
   padding: 5px;
+}
+
+.resultSection {
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #f65454;
 }
